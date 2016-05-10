@@ -2,7 +2,7 @@
   "name": "project",
   "version": "0.0.0",
   "description": "",
-  "main": "js/app.js",
+    "license": "MIT",
   "devDependencies": {
     "http-server": "^0.6.1"
   },
