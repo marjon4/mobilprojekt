@@ -1,0 +1,28 @@
+{
+  "name": "project",
+  "version": "0.0.0",
+  "description": "",
+  "main": "js/app.js",
+  "devDependencies": {
+    "http-server": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gits-15.sys.kth.se:timgr/DH2642_group_10.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+  	"angular": "^1.5.3",
+  	"angular-cookies" : "^1.5.3",
+  	"angular-dragdrop": "^1.0.13",
+  	"angular-resource": "^1.5.3",
+  	"angular-route": "^1.5.3",
+    "firebase": "^2.4.2"
+  }
+}
