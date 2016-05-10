@@ -13,16 +13,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gits-15.sys.kth.se:timgr/DH2642_group_10.git"
-  },
-  "author": "",
-  "license": "BSD-2-Clause",
-  "dependencies": {
-  	"angular": "^1.5.3",
-  	"angular-cookies" : "^1.5.3",
-  	"angular-dragdrop": "^1.0.13",
-  	"angular-resource": "^1.5.3",
-  	"angular-route": "^1.5.3",
-    "firebase": "^2.4.2"
+    "url": "git@github.com:marjon4/mobilprojekt.git"
   }
 }
