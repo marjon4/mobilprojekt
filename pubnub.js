@@ -1,3 +1,4 @@
+
 var KTHcoords= {lat:59.349249, lng:18.071340};
 
 var array = [];
@@ -36,7 +37,6 @@ var channel = 'my_giphy';
   // with Presence API to see how many people are online
   function start(){
 
- 
  var position = document.querySelector('#channel');
  position.innerHTML = 'Your current heading is ' + channel;
  
