@@ -11,6 +11,7 @@ var array = [];
     });}
 
 (function() {
+getPosition();
 
  var output = document.querySelector('#output'),
  input = document.querySelector('#input'),
