@@ -1,14 +1,4 @@
-var KTHcoords= {lat:59.349249, lng:18.071340};
-
 var array = [];
-
-    function getPosition () {
-    navigator.geolocation.getCurrentPosition(function(position) {
-       var lat = position.coords.latitude;
-       var lon = position.coords.longitude;
-       array.push(lat, lon); 
-       console.log(array);
-    });}
 
 (function() {
 getPosition();
@@ -113,76 +103,25 @@ var channel = 'my_giphy';
                });
  };
 
-  window.addEventListener('deviceorientation', function(data) {
-      if (data.alpha >= 0 && data.alpha <=90){
-        if (channel === 'north'){
-        	return}
-        else {
-        unsub();
-        channel = 'north';
+
+ function getPosition () {
+    navigator.geolocation.getCurrentPosition(function(position) {
+       var lat = position.coords.latitude; 
+       var lon = position.coords.longitude;
+       array.push(lat, lon); 
+       console.log(array);
+
+       if (lat <= 59.355717 && lat >=59.343750 && lon >= 18.053783 && lon <= 18.085455){
+        //unsub();
+        channel = 'KTH';
+        console.log("du är på kth");
         start();
-        }
+        
       }
 
-      if (data.alpha > 90 && data.alpha <=180){
-        if (channel === 'east'){
-        	return}
-        else {
-        unsub();
-        channel = 'east';
-        start();
-        }
-      }
+    });}
 
-      if (data.alpha > 180 && data.alpha <270){
-      	if (channel === 'south'){
-        	return}
-        else {
-        unsub();
-       	channel = 'south';
-        start();
-		}	
-      }
-
-      if (data.alpha >= 270 && data.alpha <=360){
-      	if (channel === 'west'){
-        	return}
-        else {
-        unsub();
-        channel = 'west';
-        start();
-        }
-      }
-    });
  
  // PubNub Playback to fetch past messages
-
-  function publishGif(gif) {
-    p.publish({
-      channel: channel,
-      message: {
-        avatar: avatar.className,
-        gif: gif
-      }
-    });
-  }
-
-  // Giphy API
-  function getGiphy(q) {
-    var url = 'http://api.giphy.com/v1/gifs/translate?api_key=dc6zaTOxFJmzC&s=' + q;
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url);
-    xhr.onload = function() {
-      var json = JSON.parse(xhr.response);
-      var gif = json.data.images.fixed_height.url;
-      console.log(gif);
-      publishGif(gif);
-    };
-    xhr.onerror = function() {
-      console.log(e);
-    };
-    xhr.send();
-  }
 
 })();
