@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 
 var KTHcoords= {lat:59.349249, lng:18.071340};
 
->>>>>>> 68c7bf77f7bf8111d25749c6b9ddfb1c1c44e50c
 var array = [];
 
 (function() {
