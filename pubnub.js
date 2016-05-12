@@ -1,3 +1,15 @@
+var KTHcoords= {lat:59.349249, lng:18.071340};
+
+var array = [];
+
+    function getPosition () {
+    navigator.geolocation.getCurrentPosition(function(position) {
+       var lat = position.coords.latitude;
+       var lon = position.coords.longitude;
+       array.push(lat, lon); 
+       console.log(array);
+    });}
+
 (function() {
 
  var output = document.querySelector('#output'),
@@ -140,11 +152,9 @@ var channel = 'my_giphy';
         start();
         }
       }
-
     });
  
  // PubNub Playback to fetch past messages
-
 
   function publishGif(gif) {
     p.publish({
