@@ -69,7 +69,6 @@ var channel = 'my_giphy';
     }
   });
 
-
   p.bind('click', button, publish);
   }
 
@@ -97,14 +96,12 @@ var channel = 'my_giphy';
     });
   }
 
-
  function unsub(){
  output.innerHTML = '';
  p.unsubscribe({
     channel: channel
                });
  };
-
 
  function getPosition () {
     navigator.geolocation.getCurrentPosition(function(position) {
