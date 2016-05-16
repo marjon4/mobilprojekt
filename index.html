@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" ng-app="app" class="no-js">
 <head>
 	<link rel="stylesheet" href="app.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -11,11 +11,6 @@
 
 <!-- Pubnub -->
 <script src="http://cdn.pubnub.com/pubnub-3.3.min.js"></script>
-
-<!-- Angular -->
-<script src="node_modules/angular/angular.js"></script>
-<script src="node_modules/angular-route/angular-route.js"></script>
-<script src="node_modules/angular-resource/angular-resource.js"></script>
 
 </head>
 <body>
@@ -31,9 +26,16 @@
 <div ng-view></div>
 
 </section>
+
+<!-- Angular -->
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="node_modules/angular-resource/angular-resource.js"></script>
+
 <script src="pubnub.js"></script>
 <script src="homeCtrl.js"></script>
 <script src="ChatService.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
