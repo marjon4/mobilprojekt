@@ -4,4 +4,8 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 		return ChatService.getCourses();		
 	}
 
+	$scope.startCC = function(course){
+		ChatService.setSelectedCourse(course);
+	}
+
 });

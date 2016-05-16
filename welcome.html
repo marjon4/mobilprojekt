@@ -4,7 +4,7 @@
 <h3>Select course to chat about</h3>
 
 <div ng-repeat="course in courses()">
-	<a href="#/chatView"><h4>{{course.name}}</h4></a>
+	<a id="courseSelector" ng-click="startCC(course.id)" href="#/chatView"><h4>{{course.name}}</h4></a>
 </div>
 
 </div>
