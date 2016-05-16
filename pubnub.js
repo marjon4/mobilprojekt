@@ -1,4 +1,3 @@
-
 var KTHcoords= {lat:59.349249, lng:18.071340};
 
 var array = [];
