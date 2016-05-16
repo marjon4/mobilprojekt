@@ -1,4 +1,4 @@
-uniChat.controller('ChatController', function ($scope) {
+uniChat.controller('ChatController', function ($scope, ChatService) {
 
 var KTHcoords= {lat:59.349249, lng:18.071340};
 
@@ -8,7 +8,7 @@ getPosition();
 
 $scope.send = function() {
 publish();
-}:
+}
 
 $scope.position = function() {
   return channel;
@@ -75,8 +75,6 @@ function start(){
     }
   });
 
-  p.bind('click', button, publish);
-  }
 
   function publish() {
     var text = input.value;
