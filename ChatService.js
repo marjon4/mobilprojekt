@@ -1,7 +1,4 @@
 uniChat.factory('ChatService', function ($resource) {
-<<<<<<< HEAD
-	return this
-=======
 
 this.courses = [
 		{
@@ -55,7 +52,6 @@ this.courses = [
 			comment : [],
 	}
                     ];
->>>>>>> c4e5f950dbd4eb221a488072fa2deb4444b1e998
 
     this.getCourses = function(){
     	return this.courses;
