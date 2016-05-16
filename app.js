@@ -9,7 +9,7 @@ uniChat.config(['$routeProvider',
     }).
     when('/chatView', {
       templateUrl: '/chatView.html',
-      controller: 'pubnub'
+      controller: 'ChatController'
     }).
     otherwise({
       redirectTo: '/homepage'
