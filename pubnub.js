@@ -75,8 +75,6 @@ function start(){
     }
   });
 
-  p.bind('click', button, publish);
-  }
 
   function publish() {
     var text = input.value;
