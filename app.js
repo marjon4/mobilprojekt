@@ -1,4 +1,4 @@
-var uniChat = angular.module('app', ['ngRoute']);
+var uniChat = angular.module('app', ['ngRoute','ngResource']);
 
 uniChat.config(function($routeProvider) {
     $routeProvider.
