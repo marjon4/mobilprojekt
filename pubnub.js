@@ -17,7 +17,9 @@ $scope.position = function() {
   return channel;
 }
 
-$scope.content = [];
+$scope.content = '';
+$scope.output = '';
+
 
  /*var output = document.querySelector('#output'),
  input = document.querySelector('#input'),
@@ -54,8 +56,7 @@ function start(){
 
       if (m.text) {
         console.log('text added...');
-        $scope.content.push(m.text.replace(/[<>]/ig, ''));
-        console.log($scope.content);
+        $scope.content+='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
       }
 
       if (m.gif) {
