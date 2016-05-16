@@ -19,19 +19,16 @@
 
 </head>
 <body>
+
 <div id="headerView">
-<header>
-  <h1>UniChat</h1>
-</header>
+	<header>
+  		<h1>UniChat</h1>
+	</header>
 </div>
+
 <section id="main" role="main">
 
-<a href="#/chatView">chatView</a>
-<div ng-repeat="course in courses()">
-	<h2>{{course.name}}</h2>
-</div>
-
-<div ng-view></div>
+	<div ng-view></div>
 
 </section>
 
