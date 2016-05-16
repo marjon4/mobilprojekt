@@ -26,6 +26,11 @@ $scope.position = function() {
   // Assign a random avatar in random color
   avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
 
+$scope.getAvatar = function() {
+  return avatar.className
+} 
+
+
  var actionUser = '';
  
  // Hey, when you fork this and try by yourself, please use your own keys! Get your keys at http://admin.pubnub.com
