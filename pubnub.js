@@ -26,8 +26,7 @@ $scope.content = [];
  master = document.querySelector('#master'),
  presence = document.querySelector('#presence');*/
  
-  // Assign a random avatar in random color
-  avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
+
 
 $scope.getAvatar = function() {
   return avatar.className
@@ -45,6 +44,8 @@ $scope.getAvatar = function() {
   // PubNub Subscribe API
   // with Presence API to see how many people are online
 function start(){
+    // Assign a random avatar in random color
+  avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
  
   p.subscribe({
     channel: channel,
