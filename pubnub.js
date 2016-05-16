@@ -1,3 +1,4 @@
+uniChatApp.controller('ChatController', function($scope){
 var KTHcoords= {lat:59.349249, lng:18.071340};
 
 var array = [];
@@ -123,3 +124,4 @@ var channel = 'my_giphy';
  // PubNub Playback to fetch past messages
 
 })();
+}
