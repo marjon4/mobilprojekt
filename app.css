@@ -13,31 +13,31 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", "Helvetica", "Arial", "sans-serif";
   background: #f9f9f9;
   color: #333;
 }
 
 header {
   background: #fff;
-  border-top: 4px solid #ce1126;
   border-bottom-color: #eee;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-h1,
 h2,
 h3 {
   margin: 0;
   text-rendering: optimizeLegibility;
+  color: #ffb3da;
 }
 
 header {
   font-size: 3.4em;
   line-height: 1.6em;
   text-align: center;
-  font-family: 'Roboto Light';
   font-weight: normal;
-  text-shadow: #FFBF08 2px 3px 0;
+  color: #ff4da6;
 }
 
 input[type=text],
@@ -105,6 +105,11 @@ button {
   position: relative;
   margin-left: 40px;
 }
+
+#welcomepage {
+  text-align: center;
+}
+
 /* Font Icons */
 
 [class^="face"],
