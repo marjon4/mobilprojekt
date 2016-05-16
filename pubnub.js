@@ -4,6 +4,8 @@ var KTHcoords= {lat:59.349249, lng:18.071340};
 
 var array = [];
 
+var channel = 'my_giphy';
+
 getPosition();
 
 $scope.send = function(query) {
@@ -21,8 +23,6 @@ $scope.position = function() {
  master = document.querySelector('#master'),
  presence = document.querySelector('#presence');*/
  
- 
-var channel = 'my_giphy';
   // Assign a random avatar in random color
   avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
 
