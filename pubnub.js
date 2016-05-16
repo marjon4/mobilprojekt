@@ -1,17 +1,27 @@
-uniChatApp.controller('ChatController', function($scope){
+uniChatApp.controller('ChatController', function ($scope) {
+
+
 var KTHcoords= {lat:59.349249, lng:18.071340};
 
 var array = [];
 
-(function() {
 getPosition();
 
- var output = document.querySelector('#output'),
+
+$scope.send = function() {
+publish();
+}:
+
+$scope.position = function() {
+  return channel;
+}
+
+ /*var output = document.querySelector('#output'),
  input = document.querySelector('#input'),
  button = document.querySelector('#button'),
  avatar = document.querySelector('#avatar'),
  master = document.querySelector('#master'),
- presence = document.querySelector('#presence');
+ presence = document.querySelector('#presence');*/
  
  
 var channel = 'my_giphy';
@@ -27,10 +37,8 @@ var channel = 'my_giphy';
 
   // PubNub Subscribe API
   // with Presence API to see how many people are online
-  function start(){
+function start(){
 
- var position = document.querySelector('#channel');
- position.innerHTML = 'Your current heading is ' + channel;
  
  var actionUser = '';
  
@@ -51,7 +59,7 @@ var channel = 'my_giphy';
       }
       content += '</span></p>';
 
-      output.innerHTML = content + output.innerHTML;
+      $scope.output = content + $scope.output;
     },
     presence: function(m) {
       console.log(m);
@@ -97,7 +105,7 @@ var channel = 'my_giphy';
   }
 
  function unsub(){
- output.innerHTML = '';
+ $scope.output = '';
  p.unsubscribe({
     channel: channel
                });
@@ -122,6 +130,4 @@ var channel = 'my_giphy';
 
  
  // PubNub Playback to fetch past messages
-
-})();
-}
+};
