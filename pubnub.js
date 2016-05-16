@@ -76,7 +76,34 @@ function start(){
   });
 
 
-  function publish() {
+
+ function unsub(){
+ $scope.output = '';
+ p.unsubscribe({
+    channel: channel
+               });
+ };
+
+};
+
+ function getPosition () {
+    navigator.geolocation.getCurrentPosition(function(position) {
+       var lat = position.coords.latitude; 
+       var lon = position.coords.longitude;
+       array.push(lat, lon); 
+       console.log(array);
+
+       if (lat <= 59.355717 && lat >=59.343750 && lon >= 18.053783 && lon <= 18.085455){
+        //unsub();
+        channel = 'KTH';
+        console.log("du är på kth");
+        start();
+        
+      }
+
+    });}
+
+      function publish() {
     var text = input.value;
 
     if (!text) return;
@@ -100,29 +127,4 @@ function start(){
     });
   }
 
- function unsub(){
- $scope.output = '';
- p.unsubscribe({
-    channel: channel
-               });
- };
-
- function getPosition () {
-    navigator.geolocation.getCurrentPosition(function(position) {
-       var lat = position.coords.latitude; 
-       var lon = position.coords.longitude;
-       array.push(lat, lon); 
-       console.log(array);
-
-       if (lat <= 59.355717 && lat >=59.343750 && lon >= 18.053783 && lon <= 18.085455){
-        //unsub();
-        channel = 'KTH';
-        console.log("du är på kth");
-        start();
-        
-      }
-
-    });}
-
-}
  });
