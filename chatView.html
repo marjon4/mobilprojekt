@@ -7,4 +7,4 @@
     
   </div>
   <p id="presence"></p>
-  <div ng-repeat="c in content"><p><i class="{{getAvatar()}}"></i><span>{{c}}</span></p></div>
+  <div ng-repeat="c in content track by $index"><p><i class="{{getAvatar()}}"></i><span>{{c}}</span></p></div>

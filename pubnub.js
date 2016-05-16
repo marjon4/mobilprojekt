@@ -16,6 +16,9 @@ publish(query);
 $scope.position = function() {
   return channel;
 }
+
+$scope.content = [];
+
  /*var output = document.querySelector('#output'),
  input = document.querySelector('#input'),
  button = document.querySelector('#button'),
@@ -47,19 +50,17 @@ function start(){
     channel: channel,
     callback: function(m, e, c) {
       actionUser = m.avatar;
-      var content = '<p><i class="' + m.avatar + '"></i><span>';
 
       if (m.text) {
-              console.log('text added...');
-        content += m.text.replace(/[<>]/ig, '');
+        console.log('text added...');
+        $scope.content.push(m.text.replace(/[<>]/ig, ''));
+        console.log($scope.content);
       }
 
       if (m.gif) {
         console.log('giphy added...');
-        content += '<img src="' + m.gif + '">'
+        //content += '<img src="' + m.gif + '">'
       }
-
-      $scope.output = content + $scope.output;
     },
     presence: function(m) {
       console.log(m);
