@@ -16,6 +16,9 @@ publish(query);
 $scope.position = function() {
   return channel;
 }
+
+$scope.content = [];
+
  /*var output = document.querySelector('#output'),
  input = document.querySelector('#input'),
  button = document.querySelector('#button'),
@@ -23,8 +26,12 @@ $scope.position = function() {
  master = document.querySelector('#master'),
  presence = document.querySelector('#presence');*/
  
-  // Assign a random avatar in random color
-  avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
+
+
+$scope.getAvatar = function() {
+  return avatar.className
+} 
+
 
  var actionUser = '';
  
@@ -37,24 +44,24 @@ $scope.position = function() {
   // PubNub Subscribe API
   // with Presence API to see how many people are online
 function start(){
+    // Assign a random avatar in random color
+  avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
  
   p.subscribe({
     channel: channel,
     callback: function(m, e, c) {
       actionUser = m.avatar;
-      var content = '<p><i class="' + m.avatar + '"></i><span>';
 
       if (m.text) {
-              console.log('text added...');
-        content += m.text.replace(/[<>]/ig, '');
+        console.log('text added...');
+        $scope.content.push(m.text.replace(/[<>]/ig, ''));
+        console.log($scope.content);
       }
 
       if (m.gif) {
         console.log('giphy added...');
-        content += '<img src="' + m.gif + '">'
+        //content += '<img src="' + m.gif + '">'
       }
-
-      $scope.output = content + $scope.output;
     },
     presence: function(m) {
       console.log(m);
