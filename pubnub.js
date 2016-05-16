@@ -8,7 +8,7 @@ getPosition();
 
 $scope.send = function() {
 publish();
-}:
+}
 
 $scope.position = function() {
   return channel;
@@ -128,4 +128,4 @@ function start(){
 
  
  // PubNub Playback to fetch past messages
-};
+});
