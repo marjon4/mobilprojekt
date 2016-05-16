@@ -124,6 +124,5 @@ function start(){
 
     });}
 
- 
- // PubNub Playback to fetch past messages
-});
+}
+ });
