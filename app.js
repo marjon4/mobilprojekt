@@ -1,7 +1,6 @@
 var uniChat = angular.module('app', ['ngRoute']);
 
-uniChat.config(['$routeProvider',
-  function($routeProvider) {
+uniChat.config(function($routeProvider) {
     $routeProvider.
     when('/homepage', {
       templateUrl: 'index.html',
@@ -14,5 +13,5 @@ uniChat.config(['$routeProvider',
     otherwise({
       redirectTo: '/homepage'
     });
-  }
-]);
+  
+});
