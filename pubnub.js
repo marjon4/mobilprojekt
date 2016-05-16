@@ -9,13 +9,13 @@ var channel = 'my_giphy';
 getPosition();
 
 $scope.send = function(query) {
+console.log(query);
 publish(query);
 }
 
 $scope.position = function() {
   return channel;
 }
-
  /*var output = document.querySelector('#output'),
  input = document.querySelector('#input'),
  button = document.querySelector('#button'),
@@ -26,6 +26,7 @@ $scope.position = function() {
   // Assign a random avatar in random color
   avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
 
+ var actionUser = '';
  
  // Hey, when you fork this and try by yourself, please use your own keys! Get your keys at http://admin.pubnub.com
  var p = PUBNUB.init({
@@ -36,10 +37,6 @@ $scope.position = function() {
   // PubNub Subscribe API
   // with Presence API to see how many people are online
 function start(){
-
- 
- var actionUser = '';
- 
  
   p.subscribe({
     channel: channel,
@@ -51,11 +48,11 @@ function start(){
               console.log('text added...');
         content += m.text.replace(/[<>]/ig, '');
       }
+
       if (m.gif) {
         console.log('giphy added...');
         content += '<img src="' + m.gif + '">'
       }
-      content += '</span></p>';
 
       $scope.output = content + $scope.output;
     },
@@ -68,8 +65,6 @@ function start(){
       }
     }
   });
- 
-
 
 
  function unsub(){
