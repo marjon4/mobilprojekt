@@ -14,5 +14,12 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:marjon4/mobilprojekt.git"
+  },
+    "dependencies": {
+    "angular": "1.3.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-route": "1.3.x",
+    "angular-resource": "1.3.x"
   }
 }
