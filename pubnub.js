@@ -6,8 +6,8 @@ var array = [];
 
 getPosition();
 
-$scope.send = function() {
-publish();
+$scope.send = function(query) {
+publish(query);
 }
 
 $scope.position = function() {
@@ -69,11 +69,6 @@ function start(){
     }
   });
  
-  p.bind('keyup', input, function(e) {
-    if ((e.keyCode || e.charCode) === 13) {
-      publish();
-    }
-  });
 
 
 
@@ -103,8 +98,8 @@ function start(){
 
     });}
 
-      function publish() {
-    var text = input.value;
+    function publish(query) {
+    var text = query;
 
     if (!text) return;
 
@@ -116,12 +111,12 @@ function start(){
         text: text
       },
       callback: function(m) {
-        input.value = '';
+        query = '';
         if (['\giphy'].some(function(v) {
             return text.toLowerCase().indexOf(v) > 0;
           })) {
-          var query = text.replace('\\giphy ', '').split(' ').join('+');
-          getGiphy(query);
+          var query2 = text.replace('\\giphy ', '').split(' ').join('+');
+          getGiphy(query2);
         }
       }
     });
