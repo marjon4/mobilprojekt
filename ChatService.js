@@ -81,7 +81,7 @@ this.courses = [
     this.getSelectedCourse = function(){
     	for(i in this.courses){
     		if(this.courses[i].status === 1){
-    			return this.courses[i].id;
+    			return this.courses[i].name;
     		}
     	}
     };
