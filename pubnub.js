@@ -76,8 +76,8 @@ $scope.start = function(){
 };
 
   $scope.getPosition = function(){
-    channel = ChatService.getSelectedCourse;
-    channel_group = ChatService.getSelectedUni;
+    channel = ChatService.getSelectedCourse();
+    channel_group = ChatService.getSelectedUni();
     $scope.start();
   }
 
