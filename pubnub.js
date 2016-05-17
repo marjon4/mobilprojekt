@@ -15,12 +15,16 @@ $scope.positionU = function() {
   }
 
 $scope.send = function(query) {
-publish(query);
+return $scope.publish(query);
 }
 
 $scope.getAvatar = function() {
   return avatar.className
 } 
+
+
+$scope.content = '';
+
 
  var actionUser = '';
  
@@ -43,8 +47,7 @@ $scope.start = function(){
 
       if (m.text) {
         console.log('text added...');
-        var content='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
-        $scope.content = content + $scope.content;
+        $scope.content +='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
       }
 
       if (m.gif) {
