@@ -3,15 +3,15 @@ uniChat.controller('ChatController', function ($scope, ChatService) {
 
 var array = [];
 
-var channel = 'SF1624';
-var channel_group = 'KTH';
+$scope.channel = 'SF1624';
+$scope.channel_group = 'KTH';
 
 $scope.positionC = function() {
-      return channel;
+      return $scope.channel;
   }
 
 $scope.positionU = function() {
-      return channel_group;
+      return $scope.channel_group;
   }
 
 $scope.send = function(query) {
@@ -77,8 +77,10 @@ $scope.start = function(){
 
   $scope.getPosition = function(){
     channel = ChatService.getSelectedCourse();
+    $scope.channel=channel;
     channel_group = ChatService.getSelectedUni();
-    $scope.start();
+    $scope.channel_group=channel_group;
+$scope.start();
   }
 
 
