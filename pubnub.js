@@ -96,6 +96,7 @@ function start(){
         channel = 'KTH';
         console.log("du är på kth");
         start();
+        publish();
         
       }
 
