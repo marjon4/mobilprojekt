@@ -1,6 +1,12 @@
 <div ng-controller="ChatController">
+
+<div class="school">
+	<span>{{positionU()}}</span>
+</div>
+
 <h2>Type <strong>\giphy [something]</strong> to get a random gif animation! - e.g. "<strong>\giphy funny cat</strong>". Of course you can just chat too.</h2>
 <h2>Your position: {{positionU()}}, {{positionC()}}</h2>
+  <a class="button" ng-href="#/">Switch course</a>
   <div id="chat">
     <i id="avatar" class="face12"></i>
     <input type="text" ng-model="query" placeholder="Type your message..."> 
