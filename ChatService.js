@@ -62,6 +62,12 @@ this.courses = [
 			id : "DH2642",
 			comment : [],
 			status : 0,
+	},
+		{
+			name : "Other courses",
+			id : "XXXX",
+			comment : [],
+			status : 0,
 	}
                     ];
 
