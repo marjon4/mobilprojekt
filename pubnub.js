@@ -89,7 +89,7 @@ $scope.start = function(){
     $scope.channel=channel;
     channel_group = ChatService.getSelectedUni();
     $scope.channel_group=channel_group;
-$scope.start();
+    $scope.start();
   }
 
 
