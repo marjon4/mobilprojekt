@@ -49,6 +49,8 @@ header {
 }
 
 h1 { color: #ffb3d9;
+  font-family: 'Droid serif', serif;
+  font-style: italic;
   font-size: 90px;
   font-weight: 400;
   line-height: 200px;
@@ -62,7 +64,8 @@ h1 { color: #ffb3d9;
 
 
 .school span { color: #000; 
-  text-decoration: none; 
+  text-decoration: none;
+  font-style: italic;
   font-size: 20px; 
   text-align: center; 
   padding: 2px 5px; 
@@ -71,13 +74,15 @@ h1 { color: #ffb3d9;
   margin: 0 auto; 
   display: block; 
   position: relative; 
-  top: -10px; 
+  top: -10px;
+  font-family: "Droid serif", serif;
 }
 
 h2,
 h3 {
   margin: 0;
   text-rendering: optimizeLegibility;
+  font-family: 'Droid serif', serif;
   font-style: italic;
   margin: 0 0 12px;
   color: #ffb3d9;
