@@ -71,6 +71,7 @@ this.courses = [
 
     this.setSelectedCourse = function(id){
     	for(i in this.courses){
+		this.courses[i].status = 0
     		if(this.courses[i].id === id){
     			this.courses[i].status = 1;
     		}
