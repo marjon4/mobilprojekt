@@ -1,6 +1,6 @@
 uniChat.factory('ChatService', function ($resource) {
 
-this.uni = "KTH";
+this.uni = "Start";
 
 this.courses = [
 		{
