@@ -6,29 +6,13 @@ var array = [];
 
 var channel = 'my_giphy';
 
-getPosition();
-
 $scope.send = function(query) {
-console.log(query);
 publish(query);
 }
 
 $scope.position = function() {
   return channel;
 }
-
-$scope.content = '';
-$scope.output = '';
-
-
- /*var output = document.querySelector('#output'),
- input = document.querySelector('#input'),
- button = document.querySelector('#button'),
- avatar = document.querySelector('#avatar'),
- master = document.querySelector('#master'),
- presence = document.querySelector('#presence');*/
- 
-
 
 $scope.getAvatar = function() {
   return avatar.className
@@ -45,7 +29,7 @@ $scope.getAvatar = function() {
 
   // PubNub Subscribe API
   // with Presence API to see how many people are online
-function start(){
+$scope.start = function(){
     // Assign a random avatar in random color
   avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
  
@@ -56,7 +40,8 @@ function start(){
 
       if (m.text) {
         console.log('text added...');
-        $scope.content+='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
+        var content='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
+        $scope.content = content + $scope.content;
       }
 
       if (m.gif) {
@@ -65,44 +50,41 @@ function start(){
       }
     },
     presence: function(m) {
-      console.log(m);
+      console.log(m.occupancy);
       if (m.occupancy > 1) {
-        presence.textContent = m.occupancy + ' people online';
+        console.log(m.occupancy);
+        $scope.precense = m.occupancy + ' people online';
       } else {
-        presence.textContent = 'Only you are online';
+        $scope.precense = 'Only you are online';
       }
     }
   });
 
 
- function unsub(){
- $scope.output = '';
+ $scope.unsub = function(){
  p.unsubscribe({
     channel: channel
-               });
+    });
  };
 
 };
 
- function getPosition () {
+ $scope.getPosition = function() {
     navigator.geolocation.getCurrentPosition(function(position) {
        var lat = position.coords.latitude; 
        var lon = position.coords.longitude;
        array.push(lat, lon); 
-       console.log(array);
 
        if (lat <= 59.355717 && lat >=59.343750 && lon >= 18.053783 && lon <= 18.085455){
         //unsub();
         channel = 'KTH';
-        console.log("du är på kth");
-        start();
-        publish();
-        
+        $scope.start();
+
       }
 
     });}
 
-    function publish(query) {
+    $scope.publish = function(query){
     var text = query;
 
     if (!text) return;
@@ -125,5 +107,6 @@ function start(){
       }
     });
   }
+  $scope.getPosition();
 
  });
