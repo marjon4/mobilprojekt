@@ -1,5 +1,7 @@
 uniChat.factory('ChatService', function ($resource) {
 
+this.uni = "KTH";
+
 this.courses = [
 		{
             name:"Algebra och geometri",
@@ -81,6 +83,14 @@ this.courses = [
     			return this.courses[i].id;
     		}
     	}
+    };
+
+    this.setSelectedUni = function(uni){
+    	this.uni = uni;
+    };
+
+    this.getSelectedUni = function(){
+    	return this.uni;
     };
 
 return this;

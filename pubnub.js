@@ -1,23 +1,26 @@
 uniChat.controller('ChatController', function ($scope, ChatService) {
 
-var KTHcoords= {lat:59.349249, lng:18.071340};
 
 var array = [];
 
-var channel = 'my_giphy';
+var channel = 'SF1624';
+var channel_group = 'KTH';
+
+$scope.positionC = function() {
+      return channel;
+  }
+
+$scope.positionU = function() {
+      return channel_group;
+  }
 
 $scope.send = function(query) {
 publish(query);
 }
 
-$scope.position = function() {
-  return channel;
-}
-
 $scope.getAvatar = function() {
   return avatar.className
 } 
-
 
  var actionUser = '';
  
@@ -69,20 +72,12 @@ $scope.start = function(){
 
 };
 
- $scope.getPosition = function() {
-    navigator.geolocation.getCurrentPosition(function(position) {
-       var lat = position.coords.latitude; 
-       var lon = position.coords.longitude;
-       array.push(lat, lon); 
+  $scope.getPosition = function(){
+    channel = ChatService.getSelectedCourse;
+    channel_group = ChatService.getSelectedUni;
+    $scope.start();
+  }
 
-       if (lat <= 59.355717 && lat >=59.343750 && lon >= 18.053783 && lon <= 18.085455){
-        //unsub();
-        channel = 'KTH';
-        $scope.start();
-
-      }
-
-    });}
 
     $scope.publish = function(query){
     var text = query;
