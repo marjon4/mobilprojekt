@@ -8,7 +8,7 @@ uniChat.config([ '$routeProvider', function($routeProvider) {
     }).
     when('/chatView', {
       templateUrl: '/chatView.html',
-      controller: 'ChatController'
+      controller: 'chatCtrl'
     }).
     otherwise({
       redirectTo: '/'
