@@ -152,8 +152,8 @@ input[type=text] {
   transition: all 200ms ease;
 }
 a.rounded.button {
-  width: 25%;
-  height:10%;
+  display:block;
+  width:25%;
   margin-left:37%;
 }
 button.rounded.button {

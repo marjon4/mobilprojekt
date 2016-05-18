@@ -34,7 +34,6 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 
 	$scope.setPosition = function(Uni){
 		ChatService.setSelectedUni(Uni);
-		$scope.$apply();
 	}
 
 $scope.getPosition();
