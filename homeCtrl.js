@@ -24,7 +24,6 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 	        //unsub();
 	        var channel = 'KTH';
 	        $scope.setPosition(channel);
-	        $scope.setPosition(channel)
 	      }
 	  });
 	}
