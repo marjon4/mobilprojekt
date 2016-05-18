@@ -75,6 +75,7 @@ $scope.start = function(){
     callback : function(m){
         for (i in JSON.stringify(m)) {
         $scope.content += '<p><i class="'+m[i].avatar+'"></i><span>'+(m[i].text)+'</span></p>';}
+        $scope.$apply();
     },
     count : 100, // 100 is the default
     reverse : false // false is the default
