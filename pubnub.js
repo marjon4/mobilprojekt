@@ -49,7 +49,7 @@ $scope.start = function(){
       if (m.text) {
         console.log('text added...');
         $scope.content +='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
-        $scope.$apply();
+        //$scope.$apply();
         $scope.query = '';
       }
 
@@ -66,7 +66,6 @@ $scope.start = function(){
       } else {
         $scope.precense = 'Only you are online';
       }
-      //$scope.$apply();
     }
   });
 
@@ -129,6 +128,6 @@ $scope.start = function(){
 
 
   $scope.getPosition();
-
+  $scope.$apply();
 
  });

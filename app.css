@@ -23,7 +23,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", "Helvetica", "Arial", "sans-serif";
+  font-family: 'Droid serif', serif;
   color: #333;
   background: #595959;
   display: block;
@@ -135,13 +135,12 @@ input[type=text] {
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
 }
-a.rounded.button {
-  display:block;
+a>button.rounded.button {
   width:25%;
   margin-left:37%;
+  margin-bottom:20px;
 }
-button.rounded.button {
-}
+
 .bubble {
   position: relative;
   background-color:#eee;
