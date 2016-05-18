@@ -30,8 +30,8 @@ $scope.content = '';
  
  // Hey, when you fork this and try by yourself, please use your own keys! Get your keys at http://admin.pubnub.com
  var p = PUBNUB.init({
-                     subscribe_key: 'sub-c-74fa7090-11dc-11e6-858f-02ee2ddab7fe',
-                     publish_key: 'pub-c-cf7ca2d3-31fd-4e14-a057-9a11853be1b8'
+                     subscribe_key: 'sub-c-5d2a3b16-107a-11e6-a6c8-0619f8945a4f',
+                     publish_key: 'pub-c-529993d2-89cb-4121-9e4b-1fed47b1b19d'
                      });
 
   // PubNub Subscribe API
@@ -66,6 +66,15 @@ $scope.start = function(){
     }
   });
 
+  p.history({
+    channel : channel,
+    callback : function(m){
+        for (i in JSON.stringify(m)) {
+        $scope.content += '<p><i class="'+m[i].avatar+'"></i><span>'+(m[i].text)+'</span></p>';}
+    },
+    count : 100, // 100 is the default
+    reverse : false // false is the default
+});
 
  $scope.unsub = function(){
  p.unsubscribe({
@@ -80,7 +89,7 @@ $scope.start = function(){
     $scope.channel=channel;
     channel_group = ChatService.getSelectedUni();
     $scope.channel_group=channel_group;
-$scope.start();
+    $scope.start();
   }
 
 
@@ -107,6 +116,9 @@ $scope.start();
       }
     });
   }
+
+
+
   $scope.getPosition();
 
  });
