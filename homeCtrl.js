@@ -23,7 +23,7 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 	       if (lat <= 59.355717 && lat >=59.343750 && lon >= 18.053783 && lon <= 18.085455){
 	        //unsub();
 	        var channel = 'KTH';
-	        $scope.setPosition(channel)
+	        $scope.setPosition(channel);
 	      }
 	  });
 	}
@@ -34,6 +34,7 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 
 	$scope.setPosition = function(Uni){
 		ChatService.setSelectedUni(Uni);
+		$scope.$apply();
 	}
 
 $scope.getPosition();
