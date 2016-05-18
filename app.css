@@ -13,7 +13,7 @@ html {
 #courseSelector {
       text-decoration: none;
       color: black;
-      font-size: 27px;
+      font-size: 20px;
       font-family: 'Droid serif', serif;
       font-style: italic;
 
@@ -123,6 +123,8 @@ button {
   margin-bottom: 1em;
   position: relative;
   top: 15px;
+  font-family: 'Droid serif', serif;
+  font-style: italic;
 }
 
 input[type=text] {
