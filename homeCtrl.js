@@ -24,17 +24,21 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 	        //unsub();
 	        var channel = 'KTH';
 	        $scope.setPosition(channel);
+	        $scope.setPosition(channel)
+	        console.log("getposition");
 	      }
 	  });
 	}
 
 	$scope.getUni = function() {
   		return ChatService.getSelectedUni();
+  		console.log("getuni");
 	}
 
 	$scope.setPosition = function(Uni){
 		ChatService.setSelectedUni(Uni);
 		$scope.$apply();
+		console.log("setposition");
 	}
 
 $scope.getPosition();
