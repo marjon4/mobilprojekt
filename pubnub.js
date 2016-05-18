@@ -45,7 +45,7 @@ $scope.start = function(){
     channel_group: channel_group,
     callback: function(m, e, c) {
       actionUser = m.avatar;
-
+      console.log("subscribe");
       if (m.text) {
         console.log('text added...');
         $scope.content +='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
@@ -82,6 +82,7 @@ $scope.start = function(){
 });
 
  $scope.unsub = function(){
+  console.log("unsub");
  p.unsubscribe({
     channel: channel,
     channel_group: channel_group
