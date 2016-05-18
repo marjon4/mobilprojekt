@@ -49,6 +49,7 @@ $scope.start = function(){
         console.log('text added...');
         $scope.content +='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
         $scope.$apply();
+        $scope.query = '';
       }
 
       if (m.gif) {
@@ -72,6 +73,7 @@ $scope.start = function(){
     callback : function(m){
         for (i in JSON.stringify(m)) {
         $scope.content += '<p><i class="'+m[i].avatar+'"></i><span>'+(m[i].text)+'</span></p>';}
+        $scope.$apply();
     },
     count : 100, // 100 is the default
     reverse : false // false is the default
