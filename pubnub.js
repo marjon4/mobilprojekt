@@ -42,6 +42,7 @@ $scope.start = function(){
  
   p.subscribe({
     channel: channel,
+    channel_group: channel_group,
     callback: function(m, e, c) {
       actionUser = m.avatar;
 
@@ -70,10 +71,10 @@ $scope.start = function(){
 
   p.history({
     channel : channel,
+    channel_group: channel_group,
     callback : function(m){
         for (i in JSON.stringify(m)) {
         $scope.content += '<p><i class="'+m[i].avatar+'"></i><span>'+(m[i].text)+'</span></p>';}
-        $scope.$apply();
     },
     count : 100, // 100 is the default
     reverse : false // false is the default
@@ -81,7 +82,8 @@ $scope.start = function(){
 
  $scope.unsub = function(){
  p.unsubscribe({
-    channel: channel
+    channel: channel,
+    channel_group: channel_group
     });
  };
 
@@ -92,7 +94,6 @@ $scope.start = function(){
     $scope.channel=channel;
     channel_group = ChatService.getSelectedUni();
     $scope.channel_group=channel_group;
-    $scope.$apply();
     $scope.start();
   }
 
@@ -105,6 +106,7 @@ $scope.start = function(){
      // PubNub Publish API
     p.publish({
       channel: channel,
+      channel_group: channel_group,
       message: {
         avatar: avatar.className,
         text: text
