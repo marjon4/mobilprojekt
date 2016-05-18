@@ -10,15 +10,6 @@ html {
   height: 100%;
 }
 
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    color: initial;
-}
-
 .chatBox {
   width: 100%;
   border-radius: 25px;
@@ -124,13 +115,6 @@ input[type=text] {
   border-radius: 100px;
 }
 
-button {
-  background: #e6e6e6;
-  text-shadow: 0 1px 0 #f3f3f3;
-  margin: .5em 0 2em 0;
-  width: 120px;
-}
-
 .rounded.button {
   border: none;
   border-radius: 100px;
@@ -151,6 +135,7 @@ button {
 }
 a.rounded.button {
   width: 25%;
+  height:10%;
   margin-left:37%;
 }
 button.rounded.button {
