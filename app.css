@@ -123,6 +123,8 @@ button {
   margin-bottom: 1em;
   position: relative;
   top: 15px;
+  font-family: 'Droid serif', serif;
+  font-style: italic;
 }
 
 input[type=text] {
