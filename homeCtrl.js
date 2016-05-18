@@ -26,6 +26,13 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 	        $scope.setPosition(channel);
 	        $scope.$apply();
 	      }
+
+	      if (lat <= 58.406053 && lat >=58.389277 && lon >= 15.552876 && lon <= 15.605662){
+	        //unsub();
+	        var channel = 'LiU';
+	        $scope.setPosition(channel);
+	        $scope.$apply();
+	      }
 	  });
 	}
 
