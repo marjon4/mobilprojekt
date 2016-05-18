@@ -236,6 +236,7 @@ a>button.rounded.button {
 [class*=" face"] {
   font-family: 'Material Icons';
   speak: none;
+  margin-right:10px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
