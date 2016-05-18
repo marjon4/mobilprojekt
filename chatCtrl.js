@@ -1,4 +1,4 @@
-uniChat.controller('ChatController', function ($scope, ChatService) {
+uniChat.controller('chatCtrl', function ($scope, ChatService) {
 
 
 var array = [];
@@ -76,7 +76,6 @@ $scope.start = function(){
         for (i in JSON.stringify(m)) {
         $scope.content += '<p><i class="'+m[i].avatar+'"></i><span>'+(m[i].text)+'</span></p>';
       }
-        //$scope.$apply();
     },
     count : 100, // 100 is the default
     reverse : false // false is the default
@@ -128,6 +127,5 @@ $scope.start = function(){
 
 
   $scope.getPosition();
-  //$scope.$apply();
 
  });
