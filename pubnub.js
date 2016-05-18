@@ -73,7 +73,6 @@ $scope.start = function(){
     callback : function(m){
         for (i in JSON.stringify(m)) {
         $scope.content += '<p><i class="'+m[i].avatar+'"></i><span>'+(m[i].text)+'</span></p>';}
-        $scope.$apply();
     },
     count : 100, // 100 is the default
     reverse : false // false is the default
@@ -92,7 +91,6 @@ $scope.start = function(){
     $scope.channel=channel;
     channel_group = ChatService.getSelectedUni();
     $scope.channel_group=channel_group;
-    $scope.$apply();
     $scope.start();
   }
 
