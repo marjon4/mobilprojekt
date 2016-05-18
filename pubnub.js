@@ -48,6 +48,7 @@ $scope.start = function(){
       if (m.text) {
         console.log('text added...');
         $scope.content +='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
+        $scope.$apply();
       }
 
       if (m.gif) {
