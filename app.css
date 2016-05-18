@@ -49,11 +49,8 @@ header {
 }
 
 h1 { color: #ffb3d9;
-<<<<<<< HEAD
-=======
   font-family: 'Droid serif', serif;
   font-style: italic;
->>>>>>> ae5f76944a772e74197fbfd2b2e44d4c6974e7e8
   font-size: 90px;
   font-weight: 400;
   line-height: 200px;
@@ -85,6 +82,7 @@ h2,
 h3 {
   margin: 0;
   text-rendering: optimizeLegibility;
+  font-family: 'Droid serif', serif;
   font-style: italic;
   margin: 0 0 12px;
   color: #ffb3d9;
