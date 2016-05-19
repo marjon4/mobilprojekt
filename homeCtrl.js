@@ -46,6 +46,8 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 
 	$scope.addCourse = function(name, id){
 		ChatService.addData(name, id);
+		$scope.courseName = '';
+		$scope.courseCode = '';
 	}
 
 $scope.getPosition();
