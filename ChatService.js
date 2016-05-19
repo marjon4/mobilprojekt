@@ -1,21 +1,23 @@
 uniChat.factory('ChatService', function ($resource) {
 
-var uni = "Start";
+var uni = "KTH";
 var courses =[];
 
-
 var myFirebaseRef = new Firebase("https://mobunichat.firebaseio.com/");
-	myFirebaseRef.on("value", function(snapshot) {
-  	data = snapshot.val().uni;
-  	courses = [];
 
-  	for(i in data){
-  		courses.push(data[i])
-  		}
-	});
+	this.loadData = function(){
+		myFirebaseRef.on("value", function(snapshot) {
+	  	data = snapshot.val()[uni];
+	  	courses = [];
+	  		for(i in data){
+	  			courses.push(data[i])
+	  		}
+		});
+
+	}
 
 	this.addData = function(Sname, Sid){
-		var postsRef = myFirebaseRef.child("uni");
+		var postsRef = myFirebaseRef.child(uni);
 
 		var newPostRef = postsRef.push();
 		newPostRef.set(
@@ -50,11 +52,13 @@ var myFirebaseRef = new Firebase("https://mobunichat.firebaseio.com/");
 
     this.setSelectedUni = function(Suni){
     	uni = Suni;
+    	
     };
 
     this.getSelectedUni = function(){
     	return uni;
     };
 
+this.loadData();
 return this;
 });

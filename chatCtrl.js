@@ -23,7 +23,7 @@ $scope.getAvatar = function() {
 } 
 
 
-//$scope.content = '';
+$scope.content = '';
 
 
  var actionUser = '';

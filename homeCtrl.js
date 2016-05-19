@@ -1,17 +1,12 @@
 uniChat.controller('homeCtrl', function($scope, ChatService) {
 
 	$scope.courses = function(){
-		return ChatService.getCourses();		
+		return ChatService.getCourses();	
 	}
 
 	$scope.startCC = function(course){
 		ChatService.setSelectedCourse(course);
 	}
-
-
-	//get uni
-
-	var KTHcoords= {lat:59.349249, lng:18.071340};
 
 
 	$scope.getPosition = function() {
