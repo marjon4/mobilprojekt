@@ -22,9 +22,9 @@ html {
 
 #courseSelector {
       text-decoration: none;
-      color: black;
+      color:  #6b6166;
       font-size: 20px;
-      font-family: 'Droid serif', serif;
+      font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
       font-style: italic;
 
 
@@ -46,7 +46,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Droid serif', serif;
+  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;;
   color: #333;
   background: #595959;
   display: block;
@@ -72,8 +72,9 @@ header {
   padding-bottom: 3px;
 }
 
-h1 { color: #ffb3d9;
-  font-family: 'Droid serif', serif;
+h1 { 
+  color: #ffb3d9;
+  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;;
   font-style: italic;
   font-size: 90px;
   font-weight: 400;
@@ -81,13 +82,15 @@ h1 { color: #ffb3d9;
   margin: 0 0 12px; 
   text-align: center; }
 
-.school { border-top: 1px solid #fff;
+.school { 
+  border-top: 1px solid #fff;
   position: relative;
   top: 20px;
   margin-bottom: 30px; }
 
 
-.school span { color: #000; 
+.school span { 
+  color: #6b6166; 
   text-decoration: none;
   font-style: italic;
   font-size: 20px; 
@@ -99,7 +102,7 @@ h1 { color: #ffb3d9;
   display: block; 
   position: relative; 
   top: -11px;
-  font-family: "Droid serif", serif;
+  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;;
   border-radius: 25px;
 }
 
@@ -107,7 +110,7 @@ h2,
 h3 {
   margin: 0;
   text-rendering: optimizeLegibility;
-  font-family: 'Droid serif', serif;
+  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;;
   font-style: italic;
   margin: 0 0 12px;
   line-height: 50px;
@@ -133,7 +136,7 @@ button {
   margin-bottom: 1em;
   position: relative;
   top: 15px;
-  font-family: 'Droid serif', serif;
+  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;;
   font-style: italic;
 }
 
@@ -147,7 +150,7 @@ input[type=text] {
   border: none;
   border-radius: 100px;
   background:#fff;
-  color: black;
+  color:  #6b6166;
   text-align: center;
   letter-spacing: 1.3px;
   text-decoration: none;
@@ -160,6 +163,7 @@ input[type=text] {
   -ms-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
+  font-weight: 600;
 }
 a>button.rounded.button {
   width:25%;
