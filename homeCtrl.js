@@ -44,6 +44,10 @@ uniChat.controller('homeCtrl', function($scope, ChatService) {
 		ChatService.setSelectedUni(Uni);
 	}
 
+	$scope.addCourse = function(name, id){
+		ChatService.addData(name, id);
+	}
+
 $scope.getPosition();
 
 });

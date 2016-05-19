@@ -15,6 +15,18 @@ var myFirebaseRef = new Firebase("https://mobunichat.firebaseio.com/");
   		}
 	});
 
+	this.addData = function(Sname, Sid){
+		var postsRef = myFirebaseRef.child("courses");
+
+		var newPostRef = postsRef.push();
+		newPostRef.set(
+				{
+				id: Sid,
+				name: Sname,
+				status: 0
+				});
+	}
+
 
     this.getCourses = function(){
     	return courses;
