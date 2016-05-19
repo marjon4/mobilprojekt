@@ -10,6 +10,16 @@ html {
   height: 100%;
 }
 
+
+.course {
+  width:300px;
+  margin-left:25%;
+}
+
+#add {
+  margin-left:50%;
+}
+
 #courseSelector {
       text-decoration: none;
       color: black;

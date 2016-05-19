@@ -11,7 +11,14 @@
 	<a id="courseSelector" ng-click="startCC(course.id)" href="#/chatView">{{course.name}}</a>
 	<br/>
 </div>
-<br/><br/><br/>
+<br/>
+<hr>
+<h2 style="font-size:34px">Add a course</h2>
+<div class="course">
+<input type="text" ng-model="courseName" placeholder="course name" style="width:300px"> 
+<input type="text" ng-model="courseCode" placeholder="course code" style="width:300px"></br>
+<button id="add" class="rounded button" ng-click="addCourse(courseName, courseCode)">Add</button>
+</div>
 
 
 
