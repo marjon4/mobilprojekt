@@ -46,12 +46,12 @@ $scope.start = function(){
     callback: function(m, e, c) {
       actionUser = m.avatar;
       console.log("subscribe");
-      $scope.hist();
+      //$scope.hist();
       if (m.text) {
         console.log('text added...');
         $scope.content +='<p><i class="'+m.avatar+'"></i><span>'+(m.text.replace(/[<>]/ig, ''))+'</span></p>';
-        $scope.$apply();
         $scope.query = '';
+        $scope.$apply();
       }
 
       if (m.gif) {
@@ -86,6 +86,7 @@ $scope.hist = function (){
     channel_group: channel_group,
     callback : function(m){
       console.log(m);
+      //$scope.content = '';
         for (i in m) {
         $scope.content += '<p><i class="'+m[i].avatar+'"></i><span>'+(m[i].text)+'</span></p>';
       }
