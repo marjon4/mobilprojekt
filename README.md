@@ -1,10 +1,18 @@
 # mobilprojekt
 Mobilutveckling med webbteknologier - Projekt
 
-git add.
 
-git commit -m "kommentar"
+Terminal:
 
-git pull origin master
+git clone https://github.com/marjon4/mobilprojekt.git
 
-git push origin master
+npm install
+
+npm install angular-sanitizer
+
+npm start
+
+
+Webbsida:
+
+localhost:8000
