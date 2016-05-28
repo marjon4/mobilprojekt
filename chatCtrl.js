@@ -53,11 +53,6 @@ $scope.start = function(){
         $scope.query = '';
         $scope.$apply();
       }
-
-      if (m.gif) {
-        console.log('giphy added...');
-        //content += '<img src="' + m.gif + '">'
-      }
     },
     presence: function(m) {
       console.log(m.occupancy);
@@ -119,15 +114,6 @@ $scope.hist = function (){
       message: {
         avatar: avatar.className,
         text: text
-      },
-      callback: function(m) {
-        query = '';
-        if (['\giphy'].some(function(v) {
-            return text.toLowerCase().indexOf(v) > 0;
-          })) {
-          var query2 = text.replace('\\giphy ', '').split(' ').join('+');
-          getGiphy(query2);
-        }
       }
     });
   }
